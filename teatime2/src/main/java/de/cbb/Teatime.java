@@ -6,11 +6,9 @@ package de.cbb;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Iterator;
+
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -22,6 +20,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 /**
  *
  * @author martin.dietrich
+ * erster commit nach stash
  */
 public class Teatime {
     
@@ -32,16 +31,11 @@ public class Teatime {
         if (args.length>0 && !args[0].isEmpty())
             WAV=args[0];
         
-//        for (Iterator it= System.getProperties().entrySet().iterator();it.hasNext();)
-//            System.out.println(it.next());
         System.out.println("Enter min:");
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         String line = r.readLine();
-//        System.out.println(line);
         int min = Integer.parseInt(line);
-//        System.out.println(min);
         Thread.sleep(min * 1000 * 60);
-        
         
         play2();
         
